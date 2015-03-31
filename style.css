@@ -2,7 +2,15 @@
     display: inline-block;
     position: relative;
     width: 320px;
-    height: 240px;
+    height: 180px;
     background-color: gray;
    
+}
+#fg {
+    display: inline-block;
+    position: absolute;
+     width: 320px;
+    height: 180px;
+    pointer-events:none;
+    z-index:8;
 }

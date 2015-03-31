@@ -1,7 +1,7 @@
 var spritesUrls=
 {
     fg:"test_fg.png",
-    alien:"test_alien.jpg"
+    alien:"alien.png"
 }
 var sprites=spritesUrls;
 
@@ -30,7 +30,7 @@ function loadAndRun()
 
 function runGame()
 {
-toScreen(sprites.fg,getW(),getH(),100).css('pointer-events','none');
+//toScreen(sprites.fg,getW(),getH(),100).css('pointer-events','none');
 
 
 
