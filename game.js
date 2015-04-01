@@ -35,8 +35,9 @@ function upscore() {
  found++
     if(found>0)
     {
+        var w1=getNumEnding(found,['обнаружен','обнаружено','обнаружено']);
         var word=getNumEnding(found,['контакт','контакта','контактов']);   
-        $('#score').text('Обнаружено '+found+' '+word);
+        $('#score').text(w1+' '+found+' '+word);
     }
     
 placeDelay-=(placeDelay/7);        
@@ -51,8 +52,9 @@ function updeath() {
     lostcount++
     if(lostcount>0)
     {
-        var word=getNumEnding(lostcount,['контакт','контакта','контактов']);   
-        $('#fail').text('Власти скрыли '+lostcount+' '+word);
+        var word=getNumEnding(lostcount,['контакт','контакта','контактов']);  
+        
+        $('#fail').text('власти скрыли '+lostcount+' '+word);
         $('#credits').css({
                     visibility: "visible"
                 })
@@ -163,6 +165,7 @@ function makeAlien(img, w, h, z) {
         .width((w != 0) ? w : img.width())
         .height((h != 0) ? h : img.height())
         .css('position', 'absolute')
+        .css('pointer-events','auto !important;')
         .css('z-index', z)
         .appendTo(screen())
         .css('visibility', 'hidden');
