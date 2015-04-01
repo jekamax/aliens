@@ -1,0 +1,28 @@
+#screen {
+    display: inline-block;
+    position: relative;
+    width: 960px;
+    height: 540px;
+    background-color: gray;
+   
+}
+#bg {
+    width: inherit;
+    height: inherit;
+   
+   
+}
+#fg {
+    display: inline-block;
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    pointer-events:none;
+    z-index:8;
+}
+#bg img {
+    width: inherit;
+}
+textarea{
+    resize: both;
+}

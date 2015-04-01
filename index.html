@@ -1,42 +1,77 @@
 <!doctype html>
 
-<html lang="en">
-<head>
-  <meta charset="utf-8">
+<html lang="ru">
 
-  <title>Власти скрывают</title>
-  <meta name="description" content="">
-  <meta name="author" content="http://github.com/jekamax/aliens">
-  <link rel="stylesheet" href="style.css">
+<head>
+    <meta charset="utf-8">
+
+    <title>Власти скрывают</title>
+    <meta name="description" content="">
+    <meta name="author" content="http://github.com/jekamax/aliens">
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
 </head>
 
 <body>
     <script type="text/javascript" src="https://yastatic.net/jquery/2.1.3/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdn.rawgit.com/julianshapiro/velocity/master/velocity.min.js"></script>
-  
-   
+
+
     <div id="screen">
-     <div id='fg'>
-       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" width="320px" height="180px" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <style>
-        svg { -webkit-background-clip: text; }
-    </style>
-    <defs>
-      <mask id="mymask">
-         <image xlink:href="mask.png" x="0" y="0" width="960px" height="540px" />
-      </mask>
-    </defs>
-    <image xlink:href="bg.jpg" mask="url(#mymask)" x="0" y="0" width="960px" height="540px" />
-</svg>
-     </div>
+        <div id='fg'>
+            <svg id='svg_fg' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <style>
+                    svg {
+                        -webkit-background-clip: text;
+                    }
+                </style>
+                <defs>
+                    <mask id="mymask">
+                        <image xlink:href="mask.png" x="0" y="0" width="960px" height="540px" />
+                    </mask>
+                </defs>
+                <image xlink:href="bg.jpg" mask="url(#mymask)" x="0" y="0" width="960px" height="540px" />
+            </svg>
+        </div>
+        <div id='bg'>
+            <img src='bg.jpg'>
+        </div>
+        <div id='backpack'>
+            <img id='alien' src='alien.png'>
+            <img id='alien_shot' src='alien_shot.png'>
+            
+        </div>
+
+        
+        <div class='wnd' id='score'>
+           
+        </div>
+        <div class='wnd' id='fail'>
+            
+        </div>
+        
+        
+        <div class='wnd' id='maxfail'>
+             Не дай властям скрыть 70 контактов!
+        </div>
+        
+        
+        <div class='wnd' id='totalfail'>
+        </div>
+        
+        
+        <div class='wnd' id='credits'>
+        арт:<a href='https://vk.com/hodiau'>ДМ</a>, код:<a href='https://vk.com/fakesocacc'>Полиграф</a>
+        </div>
     </div>
-    
+
+
+    <script type="text/javascript" src="points.js"></script>
     <script type="text/javascript" src="game.js"></script>
-    <script type="text/javascript"> loadAndRun()</script>
     
+   
+
     
-    <div>score:<div id='score'>
-      
-    </div>
 </body>
+
 </html>

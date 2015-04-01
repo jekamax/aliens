@@ -1,16 +1,114 @@
+body {
+    margin: 0;
+    padding: 0;
+    width:100%;
+    background-color: #11100A;
+}
+
 #screen {
-    display: inline-block;
+    margin: 0 auto;
+   
     position: relative;
-    width: 320px;
-    height: 180px;
+    width: 960px;
+    height: 540px;
     background-color: gray;
    
 }
 #fg {
-    display: inline-block;
     position: absolute;
-     width: 320px;
-    height: 180px;
+    width: inherit;
+    height: inherit;
     pointer-events:none;
     z-index:8;
+}
+#svg_fg {
+    width: inherit;
+    height: inherit;
+    pointer-events:none;
+}
+#bg {
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    pointer-events:none;
+    z-index:1;
+}
+#bg img {
+    width: inherit;
+}
+#backpack {
+   position: absolute;
+    width: inherit;
+    height: inherit;
+    
+    pointer-events:none;
+    z-index:-4;
+}
+
+#score {
+    margin:5px;
+    padding:5px;
+    background: url(gray.png) repeat;
+    font-size:14pt;
+     font-family: "Lucida Console", Monaco, monospace;
+    float: left;
+    color:#A68E44;
+    position: absolute;
+    z-index:16;
+    pointer-events:none;
+    
+   
+}
+
+.wnd{
+    padding:5px;
+    background: url(gray.png) repeat;
+    font-size:14pt;
+    font-family: "Lucida Console", Monaco, monospace;
+    
+    z-index:16;
+}
+#fail
+{
+    margin:10px;
+    pointer-events:none;
+    
+    color:#A87759;
+   
+    position: relative;
+    float: right;
+    
+}
+#credits
+{
+    top:510px;
+    left:5px;
+    font-size:8pt;
+    color:#2D2A24;
+   visibility:hidden;
+   
+    position: relative;
+    float:left;
+    
+}
+#maxfail
+{
+    top:40px;
+    right:10px;
+    font-weight:bold;
+    color:#A35656;
+    font-size:8pt;
+    position: absolute;
+    pointer-events:none;
+    visibility:hidden;
+   
+}
+#totalfail {
+    padding:20px;
+    color: #381010;
+    top:30%;
+    left:35%;
+    position: absolute;
+    visibility:hidden;
+   
 }
